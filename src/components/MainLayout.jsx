@@ -1,5 +1,6 @@
 import React from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
+import QuickChat from './QuickChat';
 import { 
   LayoutDashboard, Users, Calendar, BookOpen, 
   MessageSquare, Bell, Settings 
@@ -65,6 +66,8 @@ const MainLayout = () => {
 
         {/* Nơi nội dung của từng trang sẽ hiện ra */}
         <Outlet />
+        {/* Quick AI chat widget (floating) */}
+        <QuickChat />
       </div>
     </div>
   );

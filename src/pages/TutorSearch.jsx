@@ -1,6 +1,21 @@
 import React, { useState } from 'react';
 import { mockData } from '../data/mockData'; // Nhớ import data
 import { Search, Filter, Star, CheckCircle, Database } from 'lucide-react';
+import { useFollow } from '../context/FollowContext';
+
+// Small follow/unfollow button used in the results list
+const FollowButton = ({ tutorId }) => {
+  const { isFollowing, toggleFollow } = useFollow();
+  const following = isFollowing(tutorId);
+
+  return (
+    <button
+      onClick={() => toggleFollow(tutorId)}
+      className={`px-3 py-1 rounded-lg text-sm font-semibold transition-colors ${following ? 'bg-gray-200 text-gray-800 hover:bg-gray-300' : 'bg-[#06b6d4] text-white hover:opacity-90'}`}>
+      {following ? 'Unfollow' : 'Follow'}
+    </button>
+  );
+};
 
 const TutorSearch = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -100,9 +115,12 @@ const TutorSearch = () => {
                         {tutor.faculty} • {tutor.major}
                       </p>
                     </div>
-                    <button className="bg-blue-50 text-blue-600 px-4 py-2 rounded-lg font-bold text-sm hover:bg-blue-100">
-                      Đăng ký ngay
-                    </button>
+                    <div className="flex items-center gap-2">
+                      <button className="bg-blue-50 text-blue-600 px-4 py-2 rounded-lg font-bold text-sm hover:bg-blue-100">
+                        Đăng ký ngay
+                      </button>
+                      <FollowButton tutorId={tutor.id} />
+                    </div>
                   </div>
                   
                   <div className="mt-3 space-y-2">

@@ -1,17 +1,18 @@
 import React from 'react';
 import { MessageSquare } from 'lucide-react';
 import { mockData } from '../data/mockData';
+import { useFollow } from '../context/FollowContext';
 
 const Dashboard = () => {
   // Lấy dữ liệu từ mockData thay vì hard-code
   const { tutors } = mockData; 
   // Lấy 3 tutor đầu làm ví dụ recommended
   const recommendedTutors = tutors.slice(0, 3);
+  const { toggleFollow, isFollowing } = useFollow();
 
   return (
     <div className="animate-fade-in"> {/* Thêm animation nhẹ nếu muốn */}
       <div className="grid grid-cols-12 gap-8">
-          
         {/* Left Column */}
         <div className="col-span-12 lg:col-span-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">Recommended Tutors by AI</h2>
@@ -32,12 +33,14 @@ const Dashboard = () => {
 
                 <div className="flex items-center gap-1 mb-4">
                   <span className="text-black font-bold">★ {tutor.rating}</span>
-                  <span className="text-xs text-gray-400">({Math.floor(Math.random() * 50)} reviews)</span>
+                  <span className="text-xs text-gray-400">({Math.round(tutor.rating * 10)} reviews)</span>
                 </div>
 
                 <div className="space-y-2 w-full mt-auto">
-                  <button className="w-full bg-[#38bdf8] text-white font-bold py-2 rounded-lg hover:bg-sky-500 transition-colors">
-                    Follow
+                  <button
+                    onClick={() => toggleFollow(tutor.id)}
+                    className={`w-full font-bold py-2 rounded-lg transition-colors ${isFollowing(tutor.id) ? 'bg-gray-200 text-gray-800 hover:bg-gray-300' : 'bg-[#38bdf8] text-white hover:bg-sky-500'}`}>
+                    {isFollowing(tutor.id) ? 'Unfollow' : 'Follow'}
                   </button>
                   <button className="w-full text-gray-600 text-sm font-medium flex items-center justify-center gap-1">
                     <MessageSquare size={14}/> Message
