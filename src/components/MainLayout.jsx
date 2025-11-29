@@ -14,7 +14,7 @@ const MainLayout = () => {
     { icon: Users, label: "Tìm Tutor", path: "/tutors" }, // Link tới trang tìm kiếm
     { icon: Calendar, label: "Lịch hẹn", path: "/sessions" },
     { icon: BookOpen, label: "Thư viện", path: "/library" },
-    { icon: MessageSquare, label: "Tin nhắn", path: "/messages" },
+    { icon: MessageSquare, label: "Tin nhắn", path: "/Messages" },
     { icon: Bell, label: "Thông báo", path: "/notifications", badge: 3 },
     { icon: Settings, label: "Cài đặt", path: "/settings" },
   ];
