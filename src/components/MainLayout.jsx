@@ -1,5 +1,6 @@
 import React from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
+import QuickChat from './QuickChat';
 import AvatarDropdown from './AvatarDropDown';
 import { 
   LayoutDashboard, Users, Calendar, BookOpen, 
@@ -14,7 +15,7 @@ const MainLayout = ({ user }) => {
     { icon: Users, label: "Tìm Tutor", path: "/tutors" }, // Link tới trang tìm kiếm
     { icon: Calendar, label: "Lịch hẹn", path: "/sessions" },
     { icon: BookOpen, label: "Thư viện", path: "/library" },
-    { icon: MessageSquare, label: "Tin nhắn", path: "/messages" },
+    { icon: MessageSquare, label: "Tin nhắn", path: "/Messages" },
     { icon: Bell, label: "Thông báo", path: "/notifications", badge: 3 },
     { icon: Settings, label: "Cài đặt", path: "/settings" },
   ];
@@ -71,6 +72,8 @@ const MainLayout = ({ user }) => {
 
         {/* Nơi nội dung của từng trang sẽ hiện ra */}
         <Outlet />
+        {/* Quick AI chat widget (floating) */}
+        <QuickChat />
       </div>
     </div>
   );

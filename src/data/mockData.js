@@ -430,7 +430,30 @@ export const mockData = {
       targetStudents: "Ôn thi cuối kỳ, giải đề thi các năm trước",
       availableTime: ["Chiều Thứ 7, Tối CN"],
       avatar: "https://i.pravatar.cc/150?u=TUT018"
-    }
+    },
     // Bạn có thể copy thêm nhiều tutor khác
+    {
+      id: "TUT019",
+      // --- DỮ LIỆU TỪ DATACORE (READ-ONLY) ---
+      name: "Trương Phước Tiến",
+      faculty: "Khoa học ứng dụng", // Khoa
+      major: "Toán Ứng Dụng", // Ngành
+      rating: 0.0,
+      isVerified: true, // Cờ đánh dấu đã xác thực qua DataCore
+
+      // --- DỮ LIỆU DO TUTOR TỰ CẤU HÌNH ---
+      subjects: ["Đại số tuyến tính", "Giải tích"],
+      targetStudents: "Sinh viên năm 2 cần cải thiện GPA",
+      availableTime: ["Sáng Chủ Nhật", "Chiều Thứ 4"],
+      avatar: "https://i.pravatar.cc/150?u=TUT019"
+    },
   ],
+
+  users: [
+    {
+      id: "U001",
+      name: "Trần Minh Tuấn",
+      following: []
+    }
+  ]
 };

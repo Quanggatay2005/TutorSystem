@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import MainLayout from './components/MainLayout';
 import Dashboard from './pages/Dashboard';
 import TutorSearch from './pages/TutorSearch';
+import Message from './pages/Message';
 import LoginHCMUT from './pages/LoginViaSSO';
 import WelcomePage from './pages/WelcomeToApp';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -39,7 +40,7 @@ function App() {
           {/* Các route khác (Placeholder) */}
           <Route path="sessions" element={<ComingSoon />} />
           <Route path="library" element={<ComingSoon />} />
-          <Route path="messages" element={<ComingSoon />} />
+          <Route path="messages" element={<Message />} />
           
           {/* Nếu gõ linh tinh thì quay về trang chủ */}
           <Route path="*" element={<Navigate to="/" replace />} />
