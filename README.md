@@ -1,23 +1,33 @@
-# React + Vite
+# Tutor Support System — Demonstration Version
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 1. Introduction
 
-Currently, two official plugins are available:
+This application represents a demonstration of essential Minimum Viable Product (MVP) features within a tutor support system. The current implementation includes the following core functionalities:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Students may view tutor profiles, follow tutors, and engage in a simplified chat feature for demonstration purposes.
+- Authentication is supported through mock Single Sign-On (SSO) data, allowing only predefined user accounts to access the system.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 2. Execution Guide
 
-## Expanding the ESLint configuration
+### 2.1. Installation and Web Deployment
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Clone the project repository from GitHub.
+- Install all required dependencies by executing `npm install`.  
+  Please verify installation logs for potential errors.
+- Start the application using the command:  
+  `npm run dev`
+- Access the running application by Ctrl + clicking the localhost link shown in the console.
+- Terminate the server process using `Ctrl + C`.
 
-## How to run: 
-- Git clone app
-- install dependencies: npm install, check error if exists. 
-- npm run dev
-- Ctrl + click at local host
-- Ctrl + C to quit.
+---
+
+### 2.2. Authentication and System Testing
+
+- At the login interface, use the credentials:
+  - **Username:** `ngoc.nguyen`
+  - **Password:** `123456`
+- To experiment with additional user accounts, modify or extend the mock dataset located at:  
+  `/src/data/mockData.js`  
+  Within this file, usernames and corresponding passwords are stored in the **Students** object. You may use these credentials to authenticate additional test accounts.
