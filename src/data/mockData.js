@@ -1,6 +1,201 @@
 // src/data/mockData.js
 export const mockData = {
   // ... (giữ nguyên currentUser) ...
+  students: [
+    {
+      id: "STU001",
+      username: "ngoc.nguyen",
+      password: "123456", 
+      email: "ngoc.nguyen@hcmut.edu.vn",
+      fullName: "Nguyễn Ánh Ngọc",
+      faculty: "Khoa học và Kỹ thuật Máy tính",
+      major: "Khoa học Máy tính",
+      yearOfStudy: 2,
+      avatar: "https://i.pravatar.cc/150?u=STU001",
+      favoriteSubjects: ["Cấu trúc dữ liệu", "Giải thuật", "Giải tích 1"],
+    },{
+       id: "stu002",
+      username: "hoa.pham",
+      password: "123456",
+      email: "hoa.pham@hcmut.edu.vn",
+      fullName: "Phạm Văn Hòa",
+      faculty: "Khoa học và Kỹ thuật Máy tính",
+      major: "Kỹ thuật máy tính",
+      yearOfStudy: 1,
+      favoriteSubjects: ["Giải tích 1", "Xác suất thống kê"],
+      avatar: "https://i.pravatar.cc/150?u=STU002"
+    },{
+      id: "STU003",
+      username: "minh.tran",
+      password: "123456",
+      email: "minh.tran@hcmut.edu.vn",
+      fullName: "Trần Hữu Minh",
+      faculty: "Khoa học ứng dụng",
+      major: "Toán ứng dụng",
+      yearOfStudy: 2,
+      favoriteSubjects: ["Giải tích 1", "Giải tích 2", "Xác suất thống kê"],
+      avatar: "https://i.pravatar.cc/150?u=STU003"
+    },{
+      id: "STU004",
+      username: "linh.hoang",
+      password: "123456",
+      email: "linh.hoang@hcmut.edu.vn",
+      fullName: "Hoàng Thị Linh",
+      faculty: "Kỹ thuật hóa học",
+      major: "Công nghệ Hóa học",
+      yearOfStudy: 3,
+      favoriteSubjects: ["Hóa hữu cơ", "Hóa lý", "Hóa keo"],
+      avatar: "https://i.pravatar.cc/150?u=STU004"
+    },{
+      id: "STU005",
+      username: "hung.nguyen",
+      password: "123456",
+      email: "hung.nguyen@hcmut.edu.vn",
+      fullName: "Nguyễn Văn Hùng",
+      faculty: "Kỹ thuật xây dựng",
+      major: "Xây dựng Dân dụng",
+      yearOfStudy: 2,
+      favoriteSubjects: ["Kết cấu thép", "Cơ lưu chất"],
+      avatar: "https://i.pravatar.cc/150?u=STU005"
+    },{
+      id: "STU006",
+      username: "phuong.dang",
+      password: "123456",
+      email: "phuong.dang@hcmut.edu.vn",
+      fullName: "Đặng Thị Phương",
+      faculty: "Điện - Điện tử",
+      major: "Viễn thông",
+      yearOfStudy: 1,
+      favoriteSubjects: ["Mạch điện tử", "Tín hiệu số"],
+      avatar: "https://i.pravatar.cc/150?u=STU006"
+    },{
+      id: "STU007",
+      username: "quang.vo",
+      password: "123456",
+      email: "quang.vo@hcmut.edu.vn",
+      fullName: "Võ Quang Huy",
+      faculty: "Khoa học và Kỹ thuật Máy tính",
+      major: "Kỹ thuật phần mềm",
+      yearOfStudy: 1,
+      favoriteSubjects: ["Lập trình Web", "Cơ sở dữ liệu", "Công nghệ phần mềm"],
+      avatar: "https://i.pravatar.cc/150?u=STU007"
+    },{
+      id: "STU008",
+      username: "thao.le",
+      password: "123456",
+      email: "thao.le@hcmut.edu.vn",
+      fullName: "Lê Thị Thảo",
+      faculty: "Khoa học ứng dụng",
+      major: "Vật lý kỹ thuật",
+      yearOfStudy: 2,
+      favoriteSubjects: ["Xác suất thống kê", "Giải tích 2"],
+      avatar: "https://i.pravatar.cc/150?u=STU008"
+    },{
+      id: "STU009",
+      username: "kiet.bui",
+      password: "123456", 
+      email: "kiet.bui@hcmut.edu.vn",
+      fullName: "Bùi Quang Anh Kiệt",
+      faculty: "Khoa học và Kỹ thuật Máy tính",
+      major: "Khoa học Máy tính",
+      yearOfStudy: 2,
+      avatar: "https://i.pravatar.cc/150?u=STU009",
+      favoriteSubjects: ["Giải thuật", "Xác suất thống kê"],
+    }
+  ],
+
+  library_data: [
+    {
+      id: "DOC001",
+      title: "Giáo trình Giải tích 1 - Chương 1",
+      type: "document",
+      subject: "Giải tích 1",
+      thumbnail: "https://placehold.co/300x400/3B82F6/FFFFFF?text=Gi%E1%BA%A3i+T%C3%ADch+1&font=montserrat",
+      author: "ThS. Lê Văn Dũng",
+      tags: ["Giải tích", "Giáo trình", "Khoa học ứng dụng"]
+    },
+    {
+      id: "VID001",
+      title: "Bài giảng Xác suất thống kê - Phần mô tả cơ bản",
+      type: "video",
+      subject: "Xác suất thống kê",
+      thumbnail: "https://placehold.co/300x400/10B981/FFFFFF?text=X%C3%A1c+su%E1%BA%A5t+Th%E1%BB%A9c+Th%E1%BB%8B&font=montserrat",
+      author: "TS. Hoàng Minh Trí",
+      tags: ["Xác suất thống kê", "Bài giảng", "Khoa học ứng dụng"]
+    },
+    {
+      id: "DOC002",
+      title: "Sổ tay Cấu trúc dữ liệu - Từ cơ bản đến nâng cao",
+      type: "document",
+      subject: "Cấu trúc dữ liệu",
+      thumbnail: "https://placehold.co/300x400/F59E0B/FFFFFF?text=C%E1%BA%BAu+tr%C3%BAc+d%E1%BB%AF+li%E1%BB%87u&font=montserrat",
+      author: "TS. Trần Minh B",
+      tags: ["Khoa học máy tính", "Giáo trình", "Lập trình"]
+    },
+    {
+      id: "ART001",
+      title: "Phân tích thuật toán: Case study và bài tập",
+      type: "article",
+      subject: "Giải thuật",
+      thumbnail: "https://placehold.co/300x400/F97316/FFFFFF?text=Gi%E1%BA%A3i+thu%E1%BA%ADt&font=montserrat",
+      author: "TS. Trần Minh B",
+      tags: ["Khoa học máy tính", "Bài tập", "Tài liệu tham khảo"]
+    },
+    {
+      id: "DOC003",
+      title: "Cơ sở dữ liệu - Tài liệu tổng hợp",
+      type: "document",
+      subject: "Cơ sở dữ liệu",
+      thumbnail: "https://placehold.co/300x400/7C3AED/FFFFFF?text=C%C6%A1+s%E1%BB%AF+d%E1%BB%AF+li%E1%BB%87u&font=montserrat",
+      author: "ThS. Phạm Thanh Hằng",
+      tags: ["Hệ thống thông tin", "Giáo trình", "Tài liệu tham khảo"]
+    },
+    {
+      id: "VID002",
+      title: "Lập trình Web: Xây dựng SPA với React",
+      type: "video",
+      subject: "Lập trình Web",
+      thumbnail: "https://placehold.co/300x400/EF4444/FFFFFF?text=L%E1%BA%ADp+tr%C3%ACnh+Web&font=montserrat",
+      author: "Lê Quốc Việt",
+      tags: ["Kỹ thuật phần mềm", "Bài giảng", "Thực hành"]
+    },
+    {
+      id: "DOC004",
+      title: "Mạch điện tử - Bài tập có lời giải",
+      type: "document",
+      subject: "Mạch điện tử",
+      thumbnail: "https://placehold.co/300x400/06B6D4/FFFFFF?text=M%E1%BA%ADch+%C4%91i%E1%BB%87n+t%E1%BB%A9&font=montserrat",
+      author: "Nguyễn Văn C (K2020)",
+      tags: ["Điện - Điện tử", "Bài tập", "Tài liệu tham khảo"]
+    },
+    {
+      id: "ART002",
+      title: "Hóa hữu cơ: Tổng hợp phản ứng cơ bản",
+      type: "article",
+      subject: "Hóa hữu cơ",
+      thumbnail: "https://placehold.co/300x400/F43F5E/FFFFFF?text=H%C3%B3a+h%E1%BB%A3i+c%C6%A1&font=montserrat",
+      author: "TS. Phạm Thị Hương",
+      tags: ["Kỹ thuật hóa học", "Bài giảng", "Tài liệu tham khảo"]
+    },
+    {
+      id: "DOC005",
+      title: "Kết cấu thép - Hướng dẫn thiết kế và phân tích",
+      type: "document",
+      subject: "Kết cấu thép",
+      thumbnail: "https://placehold.co/300x400/64748B/FFFFFF?text=K%E1%BA%BFt+c%E1%BA%A5u+th%C3%A9p&font=montserrat",
+      author: "Nguyễn Văn Hùng (K2019)",
+      tags: ["Kỹ thuật xây dựng", "Giáo trình", "Tài liệu tham khảo"]
+    },
+    {
+      id: "OTH001",
+      title: "Tổng hợp tài nguyên học tập chung",
+      type: "other",
+      subject: "Tổng quan",
+      thumbnail: "https://placehold.co/300x400/94A3B8/FFFFFF?text=T%E1%BB%95ng+quan+h%E1%BB%8Dc+t%E1%BA%A1p&font=montserrat",
+      author: "Bộ sưu tập TutorSystem",
+      tags: ["Tổng hợp", "Tài liệu", "Học tập"]
+    }
+  ],
 
   tutors: [
     {
@@ -237,5 +432,17 @@ export const mockData = {
       avatar: "https://i.pravatar.cc/150?u=TUT018"
     }
     // Bạn có thể copy thêm nhiều tutor khác
-  ]
+  ],
+
+  library_data: [
+    {
+      id: "DOC001",
+      title: "Giáo trình Giải tích 1 - Chương 1",
+      type: "document",
+      subject: "Giải tích",
+      thumbnail: "https://placehold.co/300x400/3B82F6/FFFFFF?text=Giải+Tích+1&font=montserrat",
+      author: tutors[2].fullName,
+      tags: ["Giải tích", "học tập", "Giáo trình"]
+    }
+  ],
 };
