@@ -433,16 +433,4 @@ export const mockData = {
     }
     // Bạn có thể copy thêm nhiều tutor khác
   ],
-
-  library_data: [
-    {
-      id: "DOC001",
-      title: "Giáo trình Giải tích 1 - Chương 1",
-      type: "document",
-      subject: "Giải tích",
-      thumbnail: "https://placehold.co/300x400/3B82F6/FFFFFF?text=Giải+Tích+1&font=montserrat",
-      author: tutors[2].fullName,
-      tags: ["Giải tích", "học tập", "Giáo trình"]
-    }
-  ],
 };
