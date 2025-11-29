@@ -1,11 +1,12 @@
 import React from 'react';
 import { Outlet, Link, useLocation } from 'react-router-dom';
+import AvatarDropdown from './AvatarDropDown';
 import { 
   LayoutDashboard, Users, Calendar, BookOpen, 
   MessageSquare, Bell, Settings 
 } from 'lucide-react';
 
-const MainLayout = () => {
+const MainLayout = ({ user }) => {
   const location = useLocation(); // Lấy đường dẫn hiện tại để tô màu menu
 
   const menuItems = [
@@ -57,10 +58,15 @@ const MainLayout = () => {
       <div className="ml-64 flex-1 p-8">
         {/* Header dùng chung */}
         <div className="flex justify-end mb-6">
-           <div className="flex items-center gap-3 bg-[#1e3a8a] py-2 px-4 rounded-full shadow-lg">
-              <img src="https://i.pravatar.cc/150?u=user" className="w-8 h-8 rounded-full border border-white"/>
-              <span className="text-white font-medium text-sm">Hello, Student</span>
-           </div>
+           {/* <div className="flex items-center gap-3 bg-[#1e3a8a] py-2 px-4 rounded-full shadow-lg">
+              <img src={user.avatar} className="w-8 h-8 rounded-full border border-white"/>
+              <span className="text-white font-medium text-sm">Hello, {user?.fullName?.trim().split(/\s+/).slice(-1)[0]}</span>
+           </div> */}
+            <AvatarDropdown user={user} onLogout={() => {
+              localStorage.removeItem('token');
+              localStorage.removeItem('user');
+              window.location.href = '/login'; // redirect ra welcome/login
+            }} />
         </div>
 
         {/* Nơi nội dung của từng trang sẽ hiện ra */}
